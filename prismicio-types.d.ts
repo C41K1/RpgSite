@@ -143,6 +143,33 @@ export type SessaoDocument<Lang extends string = string> =
 
 export type AllDocumentTypes = PlayerDocument | SessaoDocument;
 
+/**
+ * Default variation for Bruh Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BruhSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Record<string, never>,
+  never
+>;
+
+/**
+ * Slice variation for *Bruh*
+ */
+type BruhSliceVariation = BruhSliceDefault;
+
+/**
+ * Bruh Shared Slice
+ *
+ * - **API ID**: `bruh`
+ * - **Description**: Bruh
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type BruhSlice = prismic.SharedSlice<"bruh", BruhSliceVariation>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -160,6 +187,9 @@ declare module "@prismicio/client" {
       SessaoDocumentDataPlayersItem,
       SessaoDocumentDataSlicesSlice,
       AllDocumentTypes,
+      BruhSlice,
+      BruhSliceVariation,
+      BruhSliceDefault,
     };
   }
 }

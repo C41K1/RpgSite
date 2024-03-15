@@ -19,7 +19,7 @@ export default async function handler(
     if (req.method === "GET") {
         page.data.players.map((ps, i) => {
             players.map((p, j) => {
-                if (ps?.player?.uid === p?.uid) {
+                if ((ps as any)?.player?.uid === p?.uid) {
                     playerdata.push({ nome: p?.data?.nome as string, img: p?.data.img });
                 }
             })
