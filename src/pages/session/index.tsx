@@ -41,17 +41,13 @@ export default function Sessao({ dados }: InferGetStaticPropsType<typeof getStat
         }
         getPlayers();
         console.log(playerdata)
-        
-
-        /*
+             
         setInterval(async () => {
             var funcmapa = await recarregar()
             if (funcmapa !== mapa) {
                 setMapa(funcmapa);
             }
         }, 5000)
-        */
-
         
     },[])
 
