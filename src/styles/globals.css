@@ -1,12 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/2da952d097bffd198ec0f0aa3fdd6804?family=JejuHallasan);
 
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  font-family: "JejuHallasan";
+  overflow: hidden
 }
+
+#wrap { width: 600px; height: 390px; padding: 0; overflow: hidden; display: grid; }
+#frame { width: 40%; scale: 0.5; border-radius: 50px;}
+    
 
 @media (prefers-color-scheme: dark) {
   :root {
